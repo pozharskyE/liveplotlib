@@ -1,6 +1,9 @@
 # LIVE PLOT LIBrary (liveplotlib)
 - Library for plotting (visualizing) cost function changes during model training (in real time)
 
+![plot](./screenshot1.png)
+
+- please, check [compatibility](#compatibility) to see if this library meets your needs and environment
 
 # Notations
 ### Specific 
@@ -177,8 +180,10 @@ live_plot.close()
 -   written on top of matplotlib library, using its figures, subplots and lines mechanics
 
 ### Compatibility
-
--   compatible with `.py` and `.ipynb` (jupyter notebook) files
+-   **it works only if you are running it on your local machine**. <br>
+(It can't run in Google colab, because google colab's notebooks run on a remote server, so you can't exit inline mode => it will give you an error if you try). <br>
+If you have any ideas how to fix this, please, feel free to propose such important improvement ))
+-   **compatible with `.py` and `.ipynb` (jupyter notebook) files**
 -   It automatically determines a caller file's format and takes appropriate actions
 
 # How to
