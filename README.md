@@ -1,7 +1,7 @@
 # LIVE PLOT LIBrary (liveplotlib)
 - Library for plotting (visualizing) cost function changes during model training (in real time)
 
-![plot](./screenshot1.png)
+<img alt="screenshot1.png" src="https://github.com/pozharskyE/liveplotlib/blob/main/screenshot1.png?raw=true">
 
 - please, check [compatibility](#compatibility) to see if this library meets your needs and environment
 
