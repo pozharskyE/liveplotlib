@@ -81,6 +81,12 @@ class LivePlotTrainAndVal():
                  slice_fraction: float = 0, 
                  print_reports: bool = True):
         
+
+        # Parameters checking 
+        if not ( 0 <= slice_fraction < 1 ):
+            raise ValueError(f"Slice fraction should be: 0 <= slice_fraction < 1  (in [0, 1)), but you gave {slice_fraction}")
+
+
         self.slice_bias = slice_bias
         self.slice_fraction = slice_fraction
 

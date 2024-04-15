@@ -18,10 +18,10 @@ class IfIPYNBHandler():
         if self.file_format == 'ipynb':
             import IPython
 
-            IPython.get_ipython().run_line_magic('matplotlib', 'qt')
+            IPython.get_ipython().run_line_magic('matplotlib', 'qt5')
 
             if self.print_reports:
-                print('matplotlib is in "separated window" mode now')
+                print('matplotlib is in "separated window" (PyQt5) mode now')
                 print('To return to "inline" mode later, just run live_plot.close()')
 
     def end(self):

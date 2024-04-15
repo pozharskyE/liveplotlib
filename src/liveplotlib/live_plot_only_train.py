@@ -10,8 +10,8 @@ class LivePlotOnlyTrain():
 
     Renders 2 subplots:
     -------------------
-    1) J_history
-    2) J_history slice (last {slice_size} steps)
+    1) J_train_history
+    2) J_train_history slice (last {slice_size} steps)
         `slice_size = slice_fraction * len(J_history) + slice_bias`
 
     Usage
@@ -70,6 +70,12 @@ class LivePlotOnlyTrain():
                  slice_bias: int = 10,
                  slice_fraction: float = 0,
                  print_reports: bool = True): 
+        
+
+        # Parameters checking 
+        if not ( 0 <= slice_fraction < 1 ):
+            raise ValueError(f"Slice fraction should be: 0 <= slice_fraction < 1  (in [0, 1)), but you gave {slice_fraction}")
+
 
         self.slice_bias = slice_bias
         self.slice_fraction = slice_fraction
@@ -102,7 +108,7 @@ class LivePlotOnlyTrain():
 
         slice = J_history[-slice_size:]
 
-        self.ax2.set_title(f"J_train_history - last {len(slice)}")
+        self.ax2.set_title(f"J_train_history - last {len(slice)} steps")
 
         self.line1.set_data(range(len(J_history)), J_history)
         self.line2.set_data(range(len(J_history) - len(slice), len(J_history)), slice)
