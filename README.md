@@ -26,7 +26,7 @@ For subsets
 Used for optimizing the model parameters (weights and biases)
 
 - `val`/`valid` - validation subset <br>
-(aka Cross-Validation (cv) or DEVeleopment (dev) subset). Used for optimizing the hyperparameters of your model (for example: learning_rate or regularization term)
+(aka Cross-Validation (cv) or DEVeleopment (dev) subset). Used for optimizing the hyperparameters of your model (for example: regularization term) and for diagnosing overfitting
 
 - `test` - test subset, used for testing how your model performs on new data
 
